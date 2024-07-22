@@ -37,7 +37,7 @@
             </div>
             <button class="login-btn" type="submit">Login</button>
 
-            <p>Belum punya akun? <a href="#">daftar!</a></p>
+            <p>Belum punya akun? <a href="{{route('register_page')}}">daftar!</a></p>
         </form>
     </div>
 </body>
