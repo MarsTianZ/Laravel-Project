@@ -54,17 +54,32 @@ class MoviesController extends Controller
     }
     public function ticketPayment(Request $request, string $slug, string $studio_slug)
     {
+        // check if seats is still `TERSEDIA`
         $request->validate([
             'seats' => 'required|string',
             'payment' => 'required|string',
         ]);
+
+
         $seats = explode(',', $request->seats);
+
+
         $paymentMethod = $request->payment;
         $movie = Movie::where('movie_slug', $slug)->first();
         $studio = Studio::where('studio_slug', $studio_slug)->first();
+        for ($i = 0; $i < count($seats); $i++) {
+            $seat = StudioSeat::where('studio_id', $studio->studio_id)->where('seat_number', $seats[$i])->first();
+            if ($seat->seat_status != "TERSEDIA") {
+                return view("movies.studios.paymentfailed");
+            }
+        }
         $payments = [];
         for ($i = 0; $i < count($seats); $i++) {
             $seat = StudioSeat::where('studio_id', $studio->studio_id)->where('seat_number', $seats[$i])->first();
+            if ($seat->seat_status != "TERSEDIA") {
+                return view("movies.studios.paymentfailed");
+            }
+            $seat = $seat->update(['seat_status' => "TERJUAL"]);
             $newPayment = Payment::create([
                 'payment_id' => $this->generatePaymentId(),
                 'nama' => auth()->user()->username,
@@ -80,6 +95,6 @@ class MoviesController extends Controller
             array_push($payments, $newPayment);
         }
 
-        return view("movies.studios.paymentreceipt",["payments"=>$payments]);
+        return view("movies.studios.paymentreceipt", ["payments" => $payments]);
     }
 }
