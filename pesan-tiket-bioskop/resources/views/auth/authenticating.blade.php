@@ -11,7 +11,7 @@
         const url = "{{route('movie_list_page')}}"
         setTimeout(() => {
             window.location.href = url;
-        }, 4000)
+        }, 2000)
     </script>
 </body>
 

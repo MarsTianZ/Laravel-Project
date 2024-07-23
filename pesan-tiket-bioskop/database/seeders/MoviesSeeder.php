@@ -27,7 +27,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 1,
                 'movie_trailer' => 'path/to/trailer1.mp4',
                 'movie_synopsis' => 'A documentary on Blackpink\'s world tour.',
-                'movie_ratings' => 'R13+'
+                'movie_ratings' => 'R13+',
+                "movie_price" => 50000
             ],
             [
                 'movie_poster' => 'path/to/kalki.jpg',
@@ -41,7 +42,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 2,
                 'movie_trailer' => 'path/to/trailer2.mp4',
                 'movie_synopsis' => 'A futuristic adventure in the year 2898.',
-                'movie_ratings' => 'SU'
+                'movie_ratings' => 'SU',
+                "movie_price" => 50000
             ],
             [
                 'movie_poster' => 'path/to/despicableme4.jpg',
@@ -55,7 +57,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 3,
                 'movie_trailer' => 'path/to/trailer3.mp4',
                 'movie_synopsis' => 'Gru and the minions are back in action.',
-                'movie_ratings' => 'SU'
+                'movie_ratings' => 'SU',
+                "movie_price" => 50000
             ],
             [
                 'movie_poster' => 'path/to/despicableme4.jpg',
@@ -69,7 +72,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 3,
                 'movie_trailer' => 'path/to/trailer3.mp4',
                 'movie_synopsis' => 'Gru and the minions are back in action.',
-                'movie_ratings' => 'SU'
+                'movie_ratings' => 'SU',
+                "movie_price" => 50000
             ],
             [
                 'movie_poster' => 'path/to/quietplace1.jpg',
@@ -83,7 +87,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 1,
                 'movie_trailer' => 'path/to/trailer4.mp4',
                 'movie_synopsis' => 'The terrifying origins of the creatures.',
-                'movie_ratings' => 'R13+'
+                'movie_ratings' => 'R13+',
+                "movie_price" => 50000
             ],
             [
                 'movie_poster' => 'path/to/quietplace2.jpg',
@@ -97,7 +102,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 2,
                 'movie_trailer' => 'path/to/trailer4.mp4',
                 'movie_synopsis' => 'The terrifying origins of the creatures.',
-                'movie_ratings' => 'R13+'
+                'movie_ratings' => 'R13+',
+                "movie_price" => 50000
             ],
             [
                 'movie_poster' => 'path/to/insideout2.jpg',
@@ -111,7 +117,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 3,
                 'movie_trailer' => 'path/to/trailer5.mp4',
                 'movie_synopsis' => 'The emotions are back with new adventures.',
-                'movie_ratings' => 'SU'
+                'movie_ratings' => 'SU',
+                "movie_price" => 50000
             ],
             [
                 'movie_poster' => 'path/to/insideout2-3d.jpg',
@@ -125,7 +132,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 3,
                 'movie_trailer' => 'path/to/trailer5.mp4',
                 'movie_synopsis' => 'The emotions are back with new adventures.',
-                'movie_ratings' => 'SU'
+                'movie_ratings' => 'SU',
+                "movie_price" => 50000
             ],
             [
                 'movie_poster' => 'path/to/twilight.jpg',
@@ -139,7 +147,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 1,
                 'movie_trailer' => 'path/to/trailer6.mp4',
                 'movie_synopsis' => 'An action-packed thriller.',
-                'movie_ratings' => 'D17+'
+                'movie_ratings' => 'D17+',
+                "movie_price" => 50000
             ],
             [
                 'movie_poster' => 'path/to/sijuki.jpg',
@@ -153,7 +162,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 2,
                 'movie_trailer' => 'path/to/trailer7.mp4',
                 'movie_synopsis' => 'A fun adventure on Monkey Island.',
-                'movie_ratings' => 'SU'
+                'movie_ratings' => 'SU',
+                "movie_price" => 50000
             ],
             [
                 'movie_poster' => 'path/to/sekawanlimo.jpg',
@@ -167,7 +177,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 3,
                 'movie_trailer' => 'path/to/trailer8.mp4',
                 'movie_synopsis' => 'A thrilling adventure with five friends.',
-                'movie_ratings' => 'R13+'
+                'movie_ratings' => 'R13+',
+                "movie_price" => 50000
             ],
             [
                 'movie_poster' => 'path/to/bikeriders.jpg',
@@ -181,7 +192,8 @@ class MoviesSeeder extends Seeder
                 'movie_casts_id' => 1,
                 'movie_trailer' => 'path/to/trailer9.mp4',
                 'movie_synopsis' => 'A gritty tale of a motorcycle gang.',
-                'movie_ratings' => 'D17+'
+                'movie_ratings' => 'D17+',
+                "movie_price" => 50000
             ],
             // Add more movies as needed
         ]);

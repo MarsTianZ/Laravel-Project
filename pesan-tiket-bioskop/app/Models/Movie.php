@@ -24,6 +24,7 @@ class Movie extends Model
         'movie_synopsis',
         'movie_ratings',
         'movie_slug',
+        'movie_price',
     ];
 
     public function producer()

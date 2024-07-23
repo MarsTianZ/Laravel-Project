@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email_address', 255)->nullable(false);
             $table->string('password', 255)->nullable(false);
             $table->string('no_telp', 20)->nullable(false);
+            $table->rememberToken();
             $table->timestamps();
         });
     }

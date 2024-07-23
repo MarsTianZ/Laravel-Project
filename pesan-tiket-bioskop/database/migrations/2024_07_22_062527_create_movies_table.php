@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('movie_trailer');
             $table->text('movie_synopsis');
             $table->text('movie_slug');
+            $table->decimal('movie_price', 19, 2);
             $table->timestamps();
 
             // Add foreign key constraints
