@@ -17,11 +17,11 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('jenis_pembayaran', 255);
             $table->string('status_pembayaran', 255);
-            $table->string('movie_id');
+            $table->unsignedBigInteger('movie_id');
             // Change this line
             $table->unsignedBigInteger('studio_id'); // Adjusted to match the studios table
             $table->string('seat_number');
-            $table->string('seat_id');
+            $table->unsignedBigInteger('seat_id');
             $table->decimal('total', 19, 2);
             $table->timestamps();
             // Foreign keys
