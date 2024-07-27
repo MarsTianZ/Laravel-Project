@@ -79,7 +79,14 @@ class MoviesController extends Controller
             if ($seat->seat_status != "TERSEDIA") {
                 return view("movies.studios.paymentfailed");
             }
-            $seat = $seat->update(['seat_status' => "TERJUAL"]);
+            // dd($seat->seat_status);
+            // how to update
+            // $seat = $seat->update(['seat_status' => "TERSEDIA"]);
+            // $seat->update(['seat_status' => "TERSEDIA"]);
+            
+            $seat->seat_status = 'TERJUAL';
+            $seat->save();
+            
             $newPayment = Payment::create([
                 'payment_id' => $this->generatePaymentId(),
                 'nama' => auth()->user()->username,
