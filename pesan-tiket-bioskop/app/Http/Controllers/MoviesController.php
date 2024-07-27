@@ -11,7 +11,8 @@ use Illuminate\Http\Request;
 
 class MoviesController extends Controller
 {
-    public function backToMoviesList(){
+    public function backToMoviesList()
+    {
         return redirect()->route('movie_list_page');
     }
     public function showMoviesPage(Request $request)
@@ -82,14 +83,9 @@ class MoviesController extends Controller
             if ($seat->seat_status != "TERSEDIA") {
                 return view("movies.studios.paymentfailed");
             }
-            // dd($seat->seat_status);
-            // how to update
-            // $seat = $seat->update(['seat_status' => "TERSEDIA"]);
-            // $seat->update(['seat_status' => "TERSEDIA"]);
-            
             $seat->seat_status = 'TERJUAL';
             $seat->save();
-            
+
             $newPayment = Payment::create([
                 'payment_id' => $this->generatePaymentId(),
                 'nama' => auth()->user()->username,
@@ -106,5 +102,10 @@ class MoviesController extends Controller
         }
 
         return view("movies.studios.paymentreceipt", ["payments" => $payments]);
+    }
+    public function showHistoryPage(Request $request)
+    {
+        $payments = Payment::where('user_id', auth()->user()->id)->with(['movie', 'studio', 'seat'])->get();
+        return view("history", ["payments" => $payments]);
     }
 }
