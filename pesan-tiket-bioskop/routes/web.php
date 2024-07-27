@@ -13,8 +13,12 @@ Route::post('/auth/login', [AuthController::class, 'loginHandler'])->name('login
 Route::get('/auth/register', [AuthController::class, 'showRegisterForm'])->name('register_page');
 Route::post('/auth/register', [AuthController::class, 'registerHandler'])->name('register');
 
+Route::get('/movies/back', [MoviesController::class, 'backToMoviesList'])->name('movies.back');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 Route::middleware([AuthMiddleware::class])->group(function () {
     Route::get('/authenticating', [AuthController::class, 'showAuthenticatingPage'])->name('authenticating');
+    Route::get('/movies', [MoviesController::class, 'showMoviesPage'])->name('movie_list_page');
     Route::get('/movies', [MoviesController::class, 'showMoviesPage'])->name('movie_list_page');
     Route::get('/movies/{slug}', [MoviesController::class, 'showMovieDetailsPage'])->name('movie_detail_page');
     Route::get('/movies/{slug}/studios', [MoviesController::class, 'showStudioPage'])->name('movie_detail_page');
@@ -30,3 +34,4 @@ Route::fallback(function () {
         return redirect()->route('login_page');
     }
 });
+

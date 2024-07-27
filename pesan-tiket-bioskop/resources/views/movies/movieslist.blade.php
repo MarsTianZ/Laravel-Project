@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=Movie List, initial-scale=1.0">
     <title>Movie List</title>
     <style>
-        h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        .container {
+      .l {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -19,8 +14,7 @@
         }
 
         .movie-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
+            border: 0px solid #ddd;
             border-radius: 5px;
             margin: 1rem;
             padding: 1rem;
@@ -31,11 +25,11 @@
 
         .movie-card img {
             max-width: 100%;
-            border-radius: 5px;
+            border-radius: 20px;
         }
 
         .movie-card h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin: 0.5rem 0;
         }
 
@@ -47,18 +41,25 @@
 </head>
 
 <body>
+    <x-layout></x-layout>
+    <div class="row">
+        <div class="col"><span class="text-center "><a
+                    class="text-decoration-none text-bg-danger text-light px-5  fs-3">NOW PLAYING</a></span>
+        </div>
+    </div>
 
-    <h1>Movie List</h1>
 
-    <main class="container">
-        @foreach($movies as $movie)
-        <a href="/movies/{{$movie->movie_slug}}">
-            <div class="movie-card">
-                <h2>{{ $movie->movie_title }}</h2>
-                <img src="{{ $movie->movie_poster }}" alt="{{ $movie->movie_title }} Poster">
-                <p>Rating: {{ $movie->movie_ratings }}</p>
-            </div>
-        </a>
+    <main class="l">
+        @foreach ($movies as $movie)
+            <a class="text-decoration-none text-light" href="/movies/{{ $movie->movie_slug }}">
+                <div class="movie-card ">
+                    <img class="border border-success p-2 mb-2 border-dark" src="{{ $movie->movie_poster }}"
+                        alt="{{ $movie->movie_title }} Poster">
+                    <h2>{{ $movie->movie_title }}</h2>
+                    <button class="btn btn-primary rounded fs-6"
+                        style="padding: 2px; pointer-events: none; ">{{ $movie->movie_ratings }}</button>
+                </div>
+            </a>
         @endforeach
     </main>
 </body>

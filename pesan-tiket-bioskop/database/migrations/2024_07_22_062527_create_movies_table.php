@@ -23,6 +23,7 @@ return new class extends Migration
             $table->unsignedBigInteger('movie_productions_studio_id');
             $table->unsignedBigInteger('movie_casts_id');
             $table->string('movie_trailer');
+            $table->string('duration');
             $table->text('movie_synopsis');
             $table->text('movie_slug');
             $table->decimal('movie_price', 19, 2);

@@ -14,9 +14,18 @@ class MovieDirectorsSeeder extends Seeder
     public function run(): void
     {
         DB::table('movie_directors')->insert([
-            ['movie_directors_name' => 'Director 1'],
-            ['movie_directors_name' => 'Director 2'],
-            ['movie_directors_name' => 'Director 3'],
+            ['movie_directors_name' => 'Yoondong Oh, Geun Min'],
+            ['movie_directors_name' => 'Kim Sung Han'],
+            ['movie_directors_name' => 'Chris Renaud'],
+            ['movie_directors_name' => 'Yoondong Oh'],
+            ['movie_directors_name' => 'Michael Sarnoski'],
+            ['movie_directors_name' => 'Adhe Dharmastriya'],
+            ['movie_directors_name' => 'Kelsey Mann'],
+            ['movie_directors_name' => 'Shawn Levy'],
+            ['movie_directors_name' => 'Rizal Mantovani'],
+            ['movie_directors_name' => 'Rizal Mantovani'],
+            ['movie_directors_name' => 'Bayu Skak'],
+            ['movie_directors_name' => 'Lee Isaac Chung'],
             // Add more directors as needed
         ]);
     }
