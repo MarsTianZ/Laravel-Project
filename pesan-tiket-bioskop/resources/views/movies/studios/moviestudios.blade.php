@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    @vite('resource/js/app.js')
 </head>
 
 <body>
-
+    <x-layout></x-layout>
+    <button class="btn btn-danger fs-4"><a class="text-decoration-none text-light"
+            href="{{ route('movies.back') }}">Kembali</a></button>
     @foreach ($studios as $studio)
     <a href="/movies/{{$movie_slug}}/studios/{{ $studio['studio_slug'] }}">
         <div>

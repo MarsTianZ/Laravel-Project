@@ -14,10 +14,18 @@ class MovieProductionsStudioSeeder extends Seeder
     public function run(): void
     {
         DB::table('movie_productions_studio')->insert([
-            ['movie_productions_studio_name' => 'Studio 1'],
-            ['movie_productions_studio_name' => 'Studio 2'],
-            ['movie_productions_studio_name' => 'Studio 3'],
-            // Add more studios as needed
+            ['movie_productions_studio_name' => 'CJ 4DPlex, ScreenX Studio'],
+            ['movie_productions_studio_name' => 'Columbia Pictures'],
+            ['movie_productions_studio_name' => 'Universal Pictures'],
+            ['movie_productions_studio_name' => 'CJ 4DPLEX, ScreenX Studio'],
+            ['movie_productions_studio_name' => 'Paramount Pictures'],
+            ['movie_productions_studio_name' => 'Mesari Pictures, JP Pictures'],
+            ['movie_productions_studio_name' => 'Walt Disney Pictures'],
+            ['movie_productions_studio_name' => 'Walt Disney Pictures'],
+            ['movie_productions_studio_name' => 'MVP Pictures'],
+            ['movie_productions_studio_name' => 'MD Pictures'],
+            ['movie_productions_studio_name' => 'Starvision, Skak Studios'],
+            ['movie_productions_studio_name' => 'Warner Bros. Pictures'],
         ]);
     }
 }

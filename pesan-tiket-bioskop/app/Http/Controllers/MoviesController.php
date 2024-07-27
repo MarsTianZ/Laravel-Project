@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 
 class MoviesController extends Controller
 {
+    public function backToMoviesList(){
+        return redirect()->route('movie_list_page');
+    }
     public function showMoviesPage(Request $request)
     {
         $moviesData = Movie::select('movie_title', 'movie_poster', 'movie_ratings', 'movie_slug')->get();
