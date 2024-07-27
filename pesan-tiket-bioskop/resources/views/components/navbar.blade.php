@@ -50,6 +50,9 @@
                         <a class="nav-link fs-4" href="/">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link fs-4" href="/history">History</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link fs-4" href="#">About Us</a>
                     </li>
                     <li class="nav-item">
