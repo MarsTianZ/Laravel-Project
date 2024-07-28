@@ -112,6 +112,7 @@
 </head>
 
 <body>
+    <x-layout2></x-layout2>
     @foreach ($payments as $payment)
     <div class="receipt" id="receipt-{{ $payment->payment_id }}">
         <h2>STRUK PEMBAYARAN TIKET BIOSKOP</h2>

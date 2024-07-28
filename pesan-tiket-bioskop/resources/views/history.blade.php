@@ -6,30 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Purchase History</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th,
-        td {
-            border: 1px solid #333;
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #333;
-        }
 
     </style>
 </head>
 
 <body>
     <x-layout></x-layout>
-        <table>
-            <thead>
+        <table class="table table-hover border rounded-">
+            <thead class="table-light">
                 <tr>
                     <th>ID Pembayaran</th>
                     <th>ID User</th>

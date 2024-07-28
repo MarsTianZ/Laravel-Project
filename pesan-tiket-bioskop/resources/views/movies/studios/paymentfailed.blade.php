@@ -121,6 +121,7 @@
 </head>
 
 <body>
+    <x-layout2></x-layout2>
     <div class="receipt">
         <h2>PAYMENT FAILED</h2>
     </div>
